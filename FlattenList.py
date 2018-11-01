@@ -1,5 +1,12 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+newflattenList = []
 def flatten_list(nested_list):
-	"""
+    """
     Flatten an arbitrarily nested list
 
     Parameters
@@ -14,3 +21,19 @@ def flatten_list(nested_list):
         A flattened list with only integers
         Example: [2,3,4,5]
     """
+    for val in nested_list:
+        print ("inside for")
+        if type(val) == list:
+            print("inside if")
+            flatten_list(val)
+        else:
+            print("inside else")
+            newflattenList.append(val)
+    return newflattenList
+    
+testList = [2,[[3,[4]], 5]]
+testList1 = ["This",[["is","a"], "Test"], "Value"]
+testList2 = ["This",[["0.00007","a", [10.2]], 10], "Value"]
+print("A flattened list: ", flatten_list(testList))
+print("A flattened list: ", flatten_list(testList1))
+print("A flattened list: ", flatten_list(testList2))
