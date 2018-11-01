@@ -42,3 +42,5 @@ and (Date('now') - birthdate) > 30;
 
 -- Bonus Data Exercise: Describe any potential concerns with either the data itself or the design of the database.
 -- Bonus Data Exercise Response:
+--1. The diagnosis values in diagnosis table can be split into multiple columns instead of comma-separating them. Having diagnosis in separate columns would result in better analysis for encounter.
+--2. The IDs in each tables can be named with a better naming convention to identify those correctly in case of multiple IDs being present in a table.
